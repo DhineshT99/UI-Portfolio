@@ -1,6 +1,7 @@
 import React from "react";
 import "./MobileNav.css";
-import logo from "../../assets/portfolio.jpg";
+import logo from "../../../public/assets/portfolio.jpg"
+
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
   return (
