@@ -1,27 +1,116 @@
-.skills-container{
-margin: 4rem 0;
-position: relative;
-}
-
-.skills-container h5{
+.skills-container {
+    margin: 4rem 0;
+    position: relative;
+  }
+  
+  .skills-container::after,
+  .skills-container::before {
+    content: "";
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    background: #7c66e3;
+    position: absolute;
+    z-index: 1;
+    filter: blur(200px);
+  }
+  
+  .skills-container::after {
+    top: -3rem;
+    left: -5rem;
+  }
+  
+  .skills-container::before {
+    background: #9e51b9;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .skills-container h5 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 3.5rem;
-}
-
-.skills-content{
+    position: relative;
+    z-index: 2; /* Ensure text is above background blur */
+  }
+  
+  .skills-content {
     display: flex;
     align-items: flex-start;
     gap: 3rem;
-}
-
-.skills{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .skills {
     flex: 1;
     display: grid;
-    grid-gap: 3rem;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.skills-info{
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skills-info {
     flex: 1;
-}
+  }
+  
+  @media (max-width: 600px) {
+    .skills-container {
+      margin: 2rem 1rem;
+    }
+  
+    .skills-container h5 {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .skills-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .skills {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .skills-container {
+      margin: 3rem 2rem;
+    }
+  
+    .skills-container h5 {
+        
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+  
+    .skills-content {
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+  
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .skills-container {
+      margin: 4rem 3rem;
+    }
+  
+    .skills-container h5 {
+      font-size: 1.6rem;
+    }
+  
+    .skills-content {
+      gap: 3rem;
+    }
+  
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+  

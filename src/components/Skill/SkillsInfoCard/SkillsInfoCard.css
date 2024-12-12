@@ -1,0 +1,93 @@
+.skills-info-card {
+    border-radius: 0.65rem;
+    border: 1.5px solid #6751b9;
+    background: rgba(22, 17, 47, 0.398);
+    backdrop-filter: blur(1rem);
+    width: 100%;
+}
+
+.skills-info-card h6 {
+    
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(180deg, #ac96ff 0%, #7c5fe6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1.5px solid #6751b9;
+}
+
+.skills-info-content {
+    margin-top: -4rem;
+    padding: 2rem;
+}
+
+.skills-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Added for better handling of narrow screens */
+}
+
+.skills-info p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem 0; /* Added spacing for narrow screens */
+}
+
+.skills-info .percentage {
+    color: #dd8cfa;
+}
+
+.skills-progress-bg {
+    width: 100%;
+    height: 0.5rem;
+    background: #382e68;
+    border-radius: 0.5rem;
+    margin: 1rem 0; /* Adjusted margin for consistency */
+    overflow: hidden;
+}
+
+.skill-progress {
+    width: 0%;
+    height: 0.5rem;
+    background: linear-gradient(90deg, #aa94fe -50%, #7d60e6 -50%);
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Media queries for responsiveness */
+
+/* Small devices (up to 600px) */
+@media screen and (max-width: 600px) {
+    .skills-info-card {
+        min-height: auto; /* Allow flexible height */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .skills-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .skills-info p {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .skills-info-card h6 {
+        font-size: 1rem; /* Adjust heading font size */
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Medium devices (601px to 992px) */
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    .skills-info-card {
+        padding: 1.5rem; /* Adjust padding for medium devices */
+    }
+
+    .skills-info p {
+        font-size: 1rem; /* Keep font size consistent */
+    }
+}
